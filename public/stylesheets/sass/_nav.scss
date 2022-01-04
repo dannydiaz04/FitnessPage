@@ -1,0 +1,65 @@
+.nav {
+    background-color: $color-primary-black;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-content: center;
+    align-content: end;
+
+
+    &__container {
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        
+         
+        
+
+    }
+
+    &__item {
+        margin: 1.5rem;
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: .05rem;
+        justify-content: center;
+        align-content: center;
+
+        &-DannyHome {
+            margin-right: auto;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-primary;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-blue-light-1;
+
+    }
+
+    // &__underline_border {
+    //     grid-column: 2 / 4;
+    //     border-top: 1px solid white;
+    //     transition: all .2s;
+    // }
+
+    // &__underline_border:hover {
+    //     border-top: 1px solid $color-blue-light-1;
+    //     transition: all .2s;
+    // }
+}

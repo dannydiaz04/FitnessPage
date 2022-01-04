@@ -1,0 +1,215 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 9vh 180vh 40vh 10vh;
+  grid-template-columns: repeat(4, minmax(min-content, 100vw)); }
+
+.header {
+  background-color: #f5f5dc;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1; }
+  .header__container {
+    background-color: #000000;
+    display: grid;
+    grid-template-rows: repeat(3, 30vh);
+    grid-template-columns: repeat(3, 1fr);
+    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641331472/FitnessPage/Danny_Dragon_Lair-grey_lqenmg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 50% 100%); }
+  .header__img {
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+    justify-self: center;
+    align-self: center; }
+  .header__heading {
+    margin-top: 1rem;
+    z-index: 25; }
+    .header__heading-1 {
+      color: #f5f5dc;
+      grid-column: 1 / -1;
+      grid-row: 1 / 3;
+      justify-self: center;
+      align-self: end;
+      font-size: 12rem; }
+    .header__heading-2 {
+      color: #f5f5dc;
+      grid-row: 2 / -1;
+      justify-self: center;
+      align-self: center;
+      animation: fadeIn linear 8s; }
+
+.footer {
+  background-color: #000000;
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr); }
+  .footer__underline_border {
+    grid-row: 1 / 1;
+    grid-column: 2 / 5;
+    margin-top: 1rem;
+    border-top: 1px solid #f5f5dc;
+    transition: all .2s; }
+  .footer__container {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    list-style: none; }
+    .footer__container__item {
+      grid-row: 2 / 3;
+      justify-self: center;
+      align-self: center;
+      font-size: 1.5rem;
+      font-weight: 900; }
+      .footer__container__item__link, .footer__container__item__visited {
+        text-align: center;
+        text-decoration: none;
+        color: #f5f5dc;
+        transition: all .3s; }
+      .footer__container__item__link:hover, .footer__container__item__link:active {
+        color: #2986cc; }
+
+.nav {
+  background-color: #000000;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-content: end; }
+  .nav__container {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-content: center; }
+  .nav__item {
+    margin: 1.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: .05rem;
+    justify-content: center;
+    align-content: center; }
+    .nav__item-DannyHome {
+      margin-right: auto; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: #f5f5dc;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .2s; }
+  .nav__link:hover, .nav__link:active {
+    color: #2986cc; }
+
+.main_filler {
+  background-color: #f5f5dc;
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); }
+  .main_filler__box {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    height: 100%;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(5, fr);
+    grid-template-rows: repeat(5, fr); }
+    .main_filler__box-text {
+      grid-row: 1 / 3;
+      grid-column: 1 / 3;
+      font-size: 8rem;
+      color: #f5f5dc;
+      justify-self: center;
+      align-self: center;
+      padding: 4rem;
+      opacity: 10%;
+      transition: opacity .8s; }
+    .main_filler__box-text:hover {
+      opacity: 100%;
+      transition: opacity .8s; }
+
+.fat_loss__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  overflow-x: hidden; }
+
+.fat_loss__items-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2; }
+
+.fat_loss__items-2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3; }
+
+.fat_loss__items-3 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4; }
+
+.fat_loss__items-4 {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5; }
+
+.fat_loss__items-5 {
+  grid-column: 5 / 6;
+  grid-row: 5 / 6; }
+
+.fat_loss__items-6 {
+  grid-column: 6 / -1;
+  grid-row: 6 / -1; }
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 250ms ease-in; }
+
+.fade-in.appear {
+  opacity: 1; }
+
+.from-left {
+  grid: 2 / 3;
+  transform: translateX(-50%); }
+
+.from-right {
+  grid-column: 3 / 4;
+  transform: translateX(50%); }
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0; }
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1; }

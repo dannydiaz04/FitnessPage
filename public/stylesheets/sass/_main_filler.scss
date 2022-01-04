@@ -1,0 +1,43 @@
+.main_filler {
+    background-color: $color-primary;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    &__box {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        height: 100%;
+        background-color: $color-primary-black;
+        // clip-path: polygon(0 0, 100% 0px, 85rem 400%);
+
+        display: grid;
+        grid-template-columns: repeat(5, fr);
+        grid-template-rows: repeat(5, fr);
+
+        &-text {
+            grid-row: 1 / 3;
+            grid-column: 1 / 3;
+
+            font-size: 8rem;
+            color: $color-primary;
+            justify-self: center;
+            align-self: center;
+            // border: 5px solid $color-primary;
+            padding: 4rem;
+
+            opacity: 10%;
+            transition: opacity .8s;
+            // animation: fadeIn linear 8s;
+
+        }
+         
+        &-text:hover {
+            opacity: 100%;
+            transition: opacity .8s;
+        }   
+    }
+}
