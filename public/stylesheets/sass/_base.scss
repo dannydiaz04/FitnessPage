@@ -1,0 +1,46 @@
+// COLOR VARIABLES
+$color-primary: #f5f5dc;
+$color-primary-black: #000000;
+
+$color-grey-light-1: #999;
+$color-grey-dark-1: #222;
+
+$color-red-light-1: #E35259;
+
+$color-blue-light-1: #2986cc;
+
+$mt-sm: 1rem;
+
+
+// Keyframes 
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}   
+  }
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 9vh 180vh 40vh 10vh;
+    grid-template-columns: repeat(4, minmax(min-content, 100vw));
+}
