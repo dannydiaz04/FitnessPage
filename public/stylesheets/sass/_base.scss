@@ -1,15 +1,23 @@
 // COLOR VARIABLES
-$color-primary: #f5f5dc;
+$color-primary:  #be0000; // #be0000
 $color-primary-black: #000000;
+$color-secondary: #f5f5dc;
 
 $color-grey-light-1: #999;
 $color-grey-dark-1: #222;
 
 $color-red-light-1: #E35259;
 
-$color-blue-light-1: #2986cc;
+$color-blue-light-1: #2986cc; //#f5f5dc #2986cc
 
 $mt-sm: 1rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 112.5em; //1400px
+$bp-large: 93.75em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //6  00px
+
 
 
 // Keyframes 
@@ -33,7 +41,7 @@ html {
 
 }
 
-body {
+body {  
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -41,6 +49,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 9vh 180vh 40vh 10vh;
     grid-template-columns: repeat(4, minmax(min-content, 100vw));
 }
+
+// grid-template-rows: 9vh 180vh 40vh 10vh;

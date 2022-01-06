@@ -1,74 +1,138 @@
     .fat_loss {
+        grid-column: 1 / -1;
+            
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-rows: repeat(16, 10rem);
+        height: 300vh;
         
-        &__container {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-
-            overflow-x: hidden;
-        }
-
+        background-color: $color-secondary;
+        
         &__items {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $color-blue-light-1;
+            align-self: center;
+            justify-self: center;
+            padding: 8rem;
+            border-bottom: 3px solid $color-blue-light-1;
+            border-top: 3px solid $color-blue-light-1;
+            // text-shadow: 1px 1px 1px $color-grey-dark-1;
+            
             
             &-1 {
                 grid-column: 1 / 2;
-                grid-row: 1 / 2;
+                grid-row: 1 / span 5;
             }
             &-2 {
                 grid-column: 2 / 3;
-                grid-row: 2 / 3;
+                grid-row: 6 / span 5;
+                
             }
             &-3 {
-                grid-column: 3 / 4;
-                grid-row: 3 / 4;
+                grid-column: 1 / 2;
+                grid-row: 11 / span 5;
 
             }
             &-4 {
-                grid-column: 4 / 5;
-                grid-row: 4 / 5;
-
+                grid-column: 2 / 3;
+                grid-row:  16 / span 5;
+                
             }
             &-5 {
-                grid-column: 5 / 6;
-                grid-row: 5 / 6;
-
+                grid-column: 1 / 2;
+                grid-row: 21 / span 5;
+                
             }
             &-6 {
-                grid-column: 6 / -1;
-                grid-row: 6 / -1;
+                grid-column: 2 / 3;
+                grid-row: 26 / span 5;
+
+            }
+
+            &-img {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                align-self: center;
+                justify-self: center;
+                
+                padding: 2rem;
+                width: 100%;
+                max-height: 100%;
+                min-height: 90%;
+
+
+
+                &-1 {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / span 5;
+                    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486236/FitnessPage/Progress-pic-6_wzkeld.jpg);
+
+                }
+
+                &-2 {
+                    grid-column: 1 / 2;
+                    grid-row: 6 / span 5;
+                    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486236/FitnessPage/Progress-pic-1_vjbu5v.jpg);
+                }
+
+                &-3 {
+                    grid-column: 2 / 3;
+                    grid-row: 11 / span 5;
+                    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486236/FitnessPage/Progress-pic-3_uy9v0w.jpg);
+                }
+
+                &-4 {
+                    grid-column: 1 / 2;
+                    grid-row: 16 / span 5;
+                    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641241971/FitnessPage/WLKT0218_2_wv2pkf.jpg);
+                }
+
+                &-5 {
+                    grid-column: 2 / 3;
+                    grid-row: 21 / span 5;
+                    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486237/FitnessPage/Progress-pic-7_dwvrth.jpg);
+                    }
+
+                &-6 {
+                    grid-column: 1 / 2;
+                    grid-row: 26 / span 5;
+                    background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486238/FitnessPage/Progress-pic-15_xszwe4.jpg);
+                }
 
             }
         }
     }
 
-    .fade-in {
-        opacity: 1;
-        transition: opacity 250ms ease-in;
-    }
+    // .fade-in {
+    //     opacity: 1;
+    //     transition: opacity 250ms ease-in;
+    // }
 
-    .fade-in.appear {
-        opacity: 1;
-    }
+    // .fade-in.appear {
+    //     opacity: 1;
+    // }
 
-    .from-left {
-        grid: 2 / 3;
-        transform: translateX(-50%);
-    }
+    // .from-left {
+    //     grid: 2 / 3;
+    //     transform: translateX(-50%);
+    // }
 
-    .from-right {
-        grid-column: 3 / 4;
-        transform: translateX(50%);
-    }
+    // .from-right {
+    //     grid-column: 3 / 4;
+    //     transform: translateX(50%);
+    // }
 
-    .from-left,
-    .from-right {
-        transition: 
-            opacity 250ms ease-in, transform 400ms ease-in;
-            opacity: 0;
-    }
+    // .from-left,
+    // .from-right {
+    //     transition: 
+    //         opacity 250ms ease-in, transform 400ms ease-in;
+    //         opacity: 0;
+    // }
 
-    .from-left.appear,
-    .from-right.appear {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    // .from-left.appear,
+    // .from-right.appear {
+    //     transform: translateX(0);
+    //     opacity: 1;
+    // }
