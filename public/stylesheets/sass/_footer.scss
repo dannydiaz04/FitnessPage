@@ -32,20 +32,21 @@
             justify-self: center;    
             align-self: center;
 
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 900;
+            letter-spacing: .05rem;
                 
             &__link,
             &__visited {
                 text-align: center;
                 text-decoration: none;
-                color: $color-blue-light-1;
+                color: $color-secondary;
                 transition: all .3s;
             }
 
             &__link:hover,
             &__link:active {
-                color: $color-secondary;
+                color: $color-blue-light-1;
             
             }
         }
