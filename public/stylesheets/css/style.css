@@ -22,11 +22,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 9vh 180vh 40vh 10vh;
   grid-template-columns: repeat(4, minmax(min-content, 100vw)); }
 
 .header {
-  background-color: #f5f5dc;
+  background-color: #fff;
   grid-row: 2 / 3;
   grid-column: 1 / -1; }
   .header__container {
@@ -36,10 +35,16 @@ body {
     grid-template-columns: repeat(3, 1fr);
     background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641331472/FitnessPage/Danny_Dragon_Lair-grey_lqenmg.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: 0rem -80rem;
+    background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 50% 100%); }
+    @media only screen and (max-width: 112.5em) {
+      .header__container {
+        background-size: cover;
+        background-position: center;
+        min-height: 100rem; } }
   .header__img {
     grid-column: 2 / 3;
     grid-row: 2 / 5;
@@ -49,14 +54,21 @@ body {
     margin-top: 1rem;
     z-index: 25; }
     .header__heading-1 {
-      color: #f5f5dc;
+      color: #fff;
+      text-shadow: 1.5px 1.5px 1.5px #000000;
       grid-column: 1 / -1;
       grid-row: 1 / 3;
       justify-self: center;
       align-self: end;
-      font-size: 12rem; }
+      font-size: 9rem;
+      font-weight: 400; }
+      @media only screen and (max-width: 112.5em) {
+        .header__heading-1 {
+          font-size: 6rem;
+          grid-row: 3 / 4;
+          max-height: 1rem; } }
     .header__heading-2 {
-      color: #f5f5dc;
+      color: #be0000;
       grid-row: 2 / -1;
       justify-self: center;
       align-self: center;
@@ -73,7 +85,7 @@ body {
     grid-row: 1 / 1;
     grid-column: 2 / 5;
     margin-top: 1rem;
-    border-top: 1px solid #f5f5dc;
+    border-top: 1px solid #2986cc;
     transition: all .2s; }
   .footer__container {
     grid-row: 1 / -1;
@@ -86,12 +98,13 @@ body {
       grid-row: 2 / 3;
       justify-self: center;
       align-self: center;
-      font-size: 1.5rem;
-      font-weight: 900; }
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: .05rem; }
       .footer__container__item__link, .footer__container__item__visited {
         text-align: center;
         text-decoration: none;
-        color: #f5f5dc;
+        color: #fff;
         transition: all .3s; }
       .footer__container__item__link:hover, .footer__container__item__link:active {
         color: #2986cc; }
@@ -119,19 +132,22 @@ body {
     letter-spacing: .05rem;
     justify-content: center;
     align-content: center; }
+    @media only screen and (max-width: 112.5em) {
+      .nav__item {
+        font-size: 1.5rem; } }
     .nav__item-DannyHome {
       margin-right: auto; }
   .nav__link:link, .nav__link:visited {
     text-decoration: none;
-    color: #f5f5dc;
+    color: #fff;
     text-align: center;
     text-transform: uppercase;
-    transition: all .2s; }
+    transition: all .5s; }
   .nav__link:hover, .nav__link:active {
     color: #2986cc; }
 
 .main_filler {
-  background-color: #f5f5dc;
+  background-color: #be0000;
   grid-row: 3 / 4;
   grid-column: 1 / -1;
   display: grid;
@@ -148,68 +164,146 @@ body {
     .main_filler__box-text {
       grid-row: 1 / 3;
       grid-column: 1 / 3;
-      font-size: 8rem;
-      color: #f5f5dc;
+      font-size: 9rem;
+      color: #fff;
       justify-self: center;
       align-self: center;
       padding: 4rem;
-      opacity: 10%;
-      transition: opacity .8s; }
+      opacity: 100%;
+      transition: opacity 5s; }
+      @media only screen and (max-width: 112.5em) {
+        .main_filler__box-text {
+          font-size: 4rem; } }
     .main_filler__box-text:hover {
       opacity: 100%;
       transition: opacity .8s; }
 
-.fat_loss__container {
+.fat_loss {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  overflow-x: hidden; }
+  grid-template-columns: repeat(2, 50%);
+  grid-row-gap: 25em;
+  background-color: #fff; }
+  @media only screen and (max-width: 112.5em) {
+    .fat_loss {
+      grid-row-gap: 15rem; } }
+  .fat_loss__heading {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+    min-height: 55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center; }
+    @media only screen and (max-width: 112.5em) {
+      .fat_loss__heading {
+        min-height: 27rem; } }
+    .fat_loss__heading-1 {
+      color: #000000;
+      background-color: #fff;
+      font-size: 8rem;
+      font-weight: 900;
+      flex-basis: 100%; }
+      @media only screen and (max-width: 112.5em) {
+        .fat_loss__heading-1 {
+          font-size: 5rem; } }
+  .fat_loss__items {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000000;
+    align-self: center;
+    justify-self: center;
+    padding: 8rem;
+    border: 3px solid #000000; }
+    @media only screen and (max-width: 112.5em) {
+      .fat_loss__items {
+        font-size: 1.8rem; } }
+    .fat_loss__items-1 {
+      grid-column: 1 / 2;
+      grid-row: 2 / span 5; }
+    .fat_loss__items-2 {
+      grid-column: 2 / 3;
+      grid-row: 7 / span 5; }
+    .fat_loss__items-3 {
+      grid-column: 1 / 2;
+      grid-row: 12 / span 5; }
+    .fat_loss__items-4 {
+      grid-column: 2 / 3;
+      grid-row: 17 / span 5; }
+    .fat_loss__items-5 {
+      grid-column: 1 / 2;
+      grid-row: 22 / span 5; }
+    .fat_loss__items-6 {
+      grid-column: 2 / 3;
+      grid-row: 27 / span 5; }
+    .fat_loss__items-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      align-self: center;
+      justify-self: center;
+      padding: 2rem;
+      width: 100%;
+      max-height: 100%;
+      min-height: 90%; }
+      .fat_loss__items-img-1 {
+        grid-column: 2 / 3;
+        grid-row: 2 / span 5;
+        background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486236/FitnessPage/Progress-pic-6_wzkeld.jpg); }
+      .fat_loss__items-img-2 {
+        grid-column: 1 / 2;
+        grid-row: 7 / span 5;
+        background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486236/FitnessPage/Progress-pic-1_vjbu5v.jpg); }
+      .fat_loss__items-img-3 {
+        grid-column: 2 / 3;
+        grid-row: 12 / span 5;
+        background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486236/FitnessPage/Progress-pic-3_uy9v0w.jpg); }
+      .fat_loss__items-img-4 {
+        grid-column: 1 / 2;
+        grid-row: 17 / span 5;
+        background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641241971/FitnessPage/WLKT0218_2_wv2pkf.jpg); }
+      .fat_loss__items-img-5 {
+        grid-column: 2 / 3;
+        grid-row: 22 / span 5;
+        background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486237/FitnessPage/Progress-pic-7_dwvrth.jpg); }
+      .fat_loss__items-img-6 {
+        grid-column: 1 / 2;
+        grid-row: 27 / span 5;
+        background-image: url(https://res.cloudinary.com/dkaag1sur/image/upload/v1641486238/FitnessPage/Progress-pic-15_xszwe4.jpg); }
 
-.fat_loss__items-1 {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2; }
-
-.fat_loss__items-2 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3; }
-
-.fat_loss__items-3 {
-  grid-column: 3 / 4;
-  grid-row: 3 / 4; }
-
-.fat_loss__items-4 {
-  grid-column: 4 / 5;
-  grid-row: 4 / 5; }
-
-.fat_loss__items-5 {
-  grid-column: 5 / 6;
-  grid-row: 5 / 6; }
-
-.fat_loss__items-6 {
-  grid-column: 6 / -1;
-  grid-row: 6 / -1; }
-
-.fade-in {
-  opacity: 1;
-  transition: opacity 250ms ease-in; }
-
-.fade-in.appear {
-  opacity: 1; }
-
-.from-left {
-  grid: 2 / 3;
-  transform: translateX(-50%); }
-
-.from-right {
-  grid-column: 3 / 4;
-  transform: translateX(50%); }
-
-.from-left,
-.from-right {
-  transition: opacity 250ms ease-in, transform 400ms ease-in;
-  opacity: 0; }
-
-.from-left.appear,
-.from-right.appear {
-  transform: translateX(0);
-  opacity: 1; }
+.workouts {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 25em;
+  background-color: #fff; }
+  .workouts__heading-2 {
+    color: #000000;
+    background-color: #fff;
+    font-size: 8rem;
+    font-weight: 900;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: center; }
+    @media only screen and (max-width: 112.5em) {
+      .workouts__heading-2 {
+        font-size: 5rem; } }
+  .workouts__heading-3 {
+    grid-column: 1/ -1;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: end;
+    font-size: 2rem; }
+  .workouts__cards {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .workouts__cards__card {
+      min-height: 20rem;
+      margin: 1rem auto; }
+      .workouts__cards__card-body {
+        min-height: 9rem;
+        background-color: #000000; }

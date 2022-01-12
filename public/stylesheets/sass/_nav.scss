@@ -32,6 +32,11 @@
         justify-content: center;
         align-content: center;
 
+        
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 1.5rem;
+        }
+
         &-DannyHome {
             margin-right: auto;
         }
@@ -40,26 +45,15 @@
     &__link:link,
     &__link:visited {
         text-decoration: none;
-        color: $color-primary;
+        color: $color-secondary;
         text-align: center;
         text-transform: uppercase;
-        transition: all .2s;
+        transition: all .5s;
     }
 
     &__link:hover,
     &__link:active {
-        color: $color-blue-light-1;
+        color: $color-blue-light-1
 
     }
-
-    // &__underline_border {
-    //     grid-column: 2 / 4;
-    //     border-top: 1px solid white;
-    //     transition: all .2s;
-    // }
-
-    // &__underline_border:hover {
-    //     border-top: 1px solid $color-blue-light-1;
-    //     transition: all .2s;
-    // }
 }

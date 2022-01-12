@@ -9,4 +9,6 @@ router.route('/main')
 
 router.get('/main/fat_loss', catchAsync(main.fat_loss_page));
 
+router.get('/main/workouts', catchAsync(main.workouts_page));
+
 module.exports = router;
